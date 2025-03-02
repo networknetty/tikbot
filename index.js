@@ -50,4 +50,17 @@ bot.on("text", async (ctx) => {
 });
 
 bot.launch();
-console.log("serve...");
+console.log(" bot serve...");
+
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Заглушка для Render (он требует открытый порт)
+app.get("/", (req, res) => {
+  res.send("app started!");
+});
+
+app.listen(PORT, () => {
+  console.log(`faik start server port: ${PORT}`);
+});
