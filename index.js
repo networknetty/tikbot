@@ -83,4 +83,9 @@ const PORT = process.env.PORT || 3000
 app.get("/", (req, res) =>
   res.send("express get/"))
 
+app.use(express.json())
+app.use(bot.webhookCallback('/bot'))
+
+bot.setWebhook(`${process.env.boturl}/bot`)
+
 app.listen(PORT, () => console.log(`start express port: ${PORT}`))
