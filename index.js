@@ -84,6 +84,6 @@ app.get("/", (req, res) =>
 app.use(express.json())
 app.use(bot.webhookCallback('/bot'))
 
-bot.setWebhook(`${process.env.boturl}/bot`)
+// bot.setWebhook(`${process.env.boturl}/bot`)
 
 app.listen(PORT, () => console.log(`start express port: ${PORT}`))
