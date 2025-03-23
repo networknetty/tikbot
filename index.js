@@ -51,12 +51,10 @@ bot.on("text", async (ctx) => {
         })
       } else {
         console.error("fail videoUrl")
-        // ctx.reply("fail videoUrl")
         ctx.reply(`❌`)
       }
     } catch (error) {
       console.error(error)
-      // ctx.reply("fail... try later")
       ctx.reply(`❌ ${error}`)
     }
   }
